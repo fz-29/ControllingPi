@@ -7,4 +7,5 @@ class devicesAdmin(admin.ModelAdmin):
 	class Meta :
 		model = device
 
+
 admin.site.register(device,devicesAdmin)

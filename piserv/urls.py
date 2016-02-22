@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 
-from communicator.views import on,off,toggle
+from communicator.views import on,off,toggle,dummy
 from django.conf.urls import include, url
 from django.contrib import admin
     
@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^on/$', 'communicator.views.on'),  
     url(r'^off/', 'communicator.views.off',name='off'),
     url(r'^toggle/$', 'communicator.views.toggle',name='toggle'),
-    url(r'^add-device/$', 'communicator.views.addDevice',name='addDevice'),
-    url(r'^get-status-all/$', 'communicator.views.statusAll',name='statusAll'),
-    url(r'^get-status-device/$', 'communicator.statusDevice',name='statusDevice'),
+    url(r'^register/$', 'communicator.views.dummy',name='dummy'),
+    url(r'^login/$', 'communicator.views.dummy',name='dummy'),
+    url(r'^signup/$', 'communicator.views.dummy',name='dummy'),
 ]
